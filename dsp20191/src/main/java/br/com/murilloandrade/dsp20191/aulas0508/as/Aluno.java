@@ -28,7 +28,6 @@ public class Aluno {
         this.nome = nome;
     }
 
-
     public void setMatricula(long matricula)
     {
         this.matricula = matricula;
