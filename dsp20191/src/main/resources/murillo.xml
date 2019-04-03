@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<class>
+  <student>
+    <matricula>201602506</matricula>
+    <firstname>MURILLO</firstname>
+    <lastname>ANDRADE</lastname>
+    <nickname>murilo.andrade</nickname>
+    <frequencia>
+      <aulas numero="0104">P</aulas>
+      <aulas numero="0508">P</aulas>
+    </frequencia>
+  </student>
+</class>
