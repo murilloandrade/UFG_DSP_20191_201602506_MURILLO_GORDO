@@ -4,11 +4,6 @@ public class DisciplinaObjeto {
 
     private ClassObjeto classe;
 
-    public DisciplinaObjeto(ClassObjeto classe)
-    {
-        setClasses(classe);
-    }
-
     public ClassObjeto getClasses() {
         return classe;
     }

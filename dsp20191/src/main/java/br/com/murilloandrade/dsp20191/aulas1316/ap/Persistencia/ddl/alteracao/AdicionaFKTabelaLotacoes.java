@@ -1,0 +1,25 @@
+package br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.alteracao;
+
+import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.base.PersistenciaJdbc;
+
+public class AdicionaFKTabelaLotacoes extends PersistenciaJdbc {
+
+    public boolean alteraTabela() throws Exception{
+
+        preparaPersistencia();
+
+        System.out.println("Alterando a Tabela Lotacoes");
+
+        String sql = "ALTER TABLE LOTACOES ADD FOREIGN KEY (CARGO) REFERENCES CARGOS(ID_CARGO) ON DELETE CASCADE;\n" +
+                "ALTER TABLE LOTACOES ADD FOREIGN KEY (DEPARTAMENTO) REFERENCES DEPARTAMENTOS(ID_DEPARTAMENTO) ON DELETE CASCADE;";
+
+        stmt.executeUpdate(sql);
+
+        System.out.println("Tabela Lotacoes alterada com sucesso!");
+
+        //STEP 4: Clean-up environment
+        stmt.close();
+        connection.close();
+        return true;
+    }
+}

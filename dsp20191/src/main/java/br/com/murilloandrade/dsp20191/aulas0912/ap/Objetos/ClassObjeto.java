@@ -1,20 +1,16 @@
 package br.com.murilloandrade.dsp20191.aulas0912.ap.Objetos;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ClassObjeto {
-    public List<StudentObjeto> student;
+    public StudentObjeto[] student;
 
-    public ClassObjeto(List<StudentObjeto> student)
-    {
-        setStudent(student);
-    }
-
-    public void setStudent(List<StudentObjeto> student) {
+    public void setStudent(StudentObjeto[] student) {
         this.student = student;
     }
 
-    public List<StudentObjeto> getStudent()
+    public StudentObjeto[] getStudent()
     {
         return student;
     }

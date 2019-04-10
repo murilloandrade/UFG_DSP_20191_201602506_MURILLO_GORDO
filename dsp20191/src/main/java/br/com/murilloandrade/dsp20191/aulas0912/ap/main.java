@@ -15,14 +15,17 @@ public class main {
         String UrlJsonLeitor = "src/main/resources/students.json";
         String matriculaTeste = "201602506";
 
-        LeitorXML printer = new LeitorXML();
+        //LeitorXML printer = new LeitorXML();
         //Remover o parâmetro matricula irá chamar um método que printa os dados de todos os alunos.
-        printer.LerXML(UrlXmlLeitor,matriculaTeste);
+        //printer.LerXML(UrlXmlLeitor,matriculaTeste);
 
-        EscritorXML escritor = new EscritorXML();
-        escritor.EscreverXML(UrlXmlLeitor, UrlXmlEscritor, matriculaTeste);
+        //EscritorXML escritor = new EscritorXML();
+        //escritor.EscreverXML(UrlXmlLeitor, UrlXmlEscritor, matriculaTeste);
 
-        EditorXML editor = new EditorXML();
-        editor.EditarXML(UrlXmlLeitor);
+        //EditorXML editor = new EditorXML();
+        //editor.EditarXML(UrlXmlLeitor);
+
+        LeitorJSON leitorJSON = new LeitorJSON();
+        leitorJSON.LerJSON(UrlJsonLeitor);
     }
 }

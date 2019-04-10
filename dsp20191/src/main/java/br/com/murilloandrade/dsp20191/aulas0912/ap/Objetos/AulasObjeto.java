@@ -4,12 +4,6 @@ public class AulasObjeto {
     public String numero;
     public String text;
 
-    public AulasObjeto(String numero, String text)
-    {
-        setNumero(numero);
-        setText(text);
-    }
-
     public void setText(String text) {
         this.text = text;
     }

@@ -7,16 +7,7 @@ public class StudentObjeto {
     public String firstname;
     public String lastname;
     public String nickname;
-    public List<FrequenciaObjeto> frequencia;
-
-    public StudentObjeto(String matricula, String firstname, String lastname, String nickname, List<FrequenciaObjeto> frequencia)
-    {
-        setMatricula(matricula);
-        setFirstname(firstname);
-        setLastname(lastname);
-        setNickname(nickname);
-        setFrequencia(frequencia);
-    }
+    public FrequenciaObjeto frequencia;
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
@@ -34,7 +25,7 @@ public class StudentObjeto {
         this.nickname = nickname;
     }
 
-    public void setFrequencia(List<FrequenciaObjeto> frequencia) {
+    public void setFrequencia(FrequenciaObjeto frequencia) {
         this.frequencia = frequencia;
     }
 
@@ -54,7 +45,7 @@ public class StudentObjeto {
         return nickname;
     }
 
-    public List<FrequenciaObjeto> getFrequencia() {
+    public FrequenciaObjeto getFrequencia() {
         return frequencia;
     }
 }
