@@ -20,15 +20,15 @@ public class InstanciaObjetos {
     public Funcionario[] instanciarFuncionarios(){
         Funcionario[] funcionarios = new Funcionario[10];
         funcionarios[0] = new Funcionario("Caesar",(long) 20160,(long) 20);
-        funcionarios[1] = new Funcionario("Jonathan",(long) 20160,(long) 21);
-        funcionarios[2] = new Funcionario("Joseph",(long) 20160,(long) 22);
-        funcionarios[3] = new Funcionario("Jotaro",(long) 20160,(long) 23);
-        funcionarios[4] = new Funcionario("Josuke",(long) 20160,(long) 24);
-        funcionarios[5] = new Funcionario("Giorno",(long) 20160,(long) 25);
-        funcionarios[6] = new Funcionario("Jolyne",(long) 20160,(long) 26);
-        funcionarios[7] = new Funcionario("John",(long) 20160,(long) 27);
-        funcionarios[8] = new Funcionario("Dio",(long) 20160,(long) 28);
-        funcionarios[9] = new Funcionario("Smokey",(long) 20160,(long) 29);
+        funcionarios[1] = new Funcionario("Jonathan",(long) 20161,(long) 21);
+        funcionarios[2] = new Funcionario("Joseph",(long) 20162,(long) 22);
+        funcionarios[3] = new Funcionario("Jotaro",(long) 20163,(long) 23);
+        funcionarios[4] = new Funcionario("Josuke",(long) 20164,(long) 24);
+        funcionarios[5] = new Funcionario("Giorno",(long) 20165,(long) 25);
+        funcionarios[6] = new Funcionario("Jolyne",(long) 20166,(long) 26);
+        funcionarios[7] = new Funcionario("John",(long) 20167,(long) 27);
+        funcionarios[8] = new Funcionario("Dio",(long) 20168,(long) 28);
+        funcionarios[9] = new Funcionario("Smokey",(long) 20169,(long) 29);
         return funcionarios;
     }
 

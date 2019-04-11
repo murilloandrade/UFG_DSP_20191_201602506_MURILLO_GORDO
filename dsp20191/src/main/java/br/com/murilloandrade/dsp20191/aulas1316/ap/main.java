@@ -92,5 +92,7 @@ public class main {
         pl.persisteLotacao(lotacoes[7]);
         pl.persisteLotacao(lotacoes[8]);
         pl.persisteLotacao(lotacoes[9]);
+
+
     }
 }
