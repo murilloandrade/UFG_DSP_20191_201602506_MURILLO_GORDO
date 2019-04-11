@@ -1,6 +1,6 @@
 package br.com.murilloandrade.dsp20191.aulas1316.ap.Objetos;
 
-import java.util.Date;
+import java.sql.Date;
 
 public class Lotacao {
     public Long id;
@@ -8,13 +8,15 @@ public class Lotacao {
     public Date dataFinal;
     public Cargo cargo;
     public Departamento departamento;
+    public Funcionario funcionario;
 
-    public Lotacao(Long id, Date dataInicial, Date dataFinal, Cargo cargo, Departamento departamento) {
+    public Lotacao(Long id, Date dataInicial, Date dataFinal, Cargo cargo, Departamento departamento, Funcionario funcionario) {
         this.id = id;
         this.dataInicial = dataInicial;
         this.dataFinal = dataFinal;
         this.cargo = cargo;
         this.departamento = departamento;
+        this.funcionario = funcionario;
     }
 
     public Lotacao() {}
@@ -57,5 +59,11 @@ public class Lotacao {
 
     public void setDepartamento(Departamento departamento) {
         this.departamento = departamento;
+    }
+
+    public Funcionario getFuncionario() { return funcionario; }
+
+    public void setFuncionario(Funcionario funcionario) {
+        this.funcionario = funcionario;
     }
 }

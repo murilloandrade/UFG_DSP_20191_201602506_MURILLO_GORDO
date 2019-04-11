@@ -11,6 +11,10 @@ import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.criacao.Tabl
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.criacao.TableDepartamentosCreate;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.criacao.TableFuncionariosCreate;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.criacao.TableLotacoesCreate;
+import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.exclusao.TableCargosDrop;
+import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.exclusao.TableDepartamentosDrop;
+import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.exclusao.TableFuncionariosDrop;
+import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.ddl.exclusao.TableLotacoesDrop;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.dml.insert.PersisteCargo;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.dml.insert.PersisteDepartamento;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.dml.insert.PersisteFuncionario;
@@ -21,9 +25,23 @@ public class main {
         CriaConexao conn = new CriaConexao();
         conn.getConnection("file");
         InstanciaObjetos iob = new InstanciaObjetos();
-        //Funcionario[] funcionarios = iob.instanciarFuncionarios();
-        //Cargo[] cargos = iob.instanciarCargos();
-        //Departamento[] departamentos = iob.instanciarDepartamentos();
+        Funcionario[] funcionarios = iob.instanciarFuncionarios();
+        Cargo[] cargos = iob.instanciarCargos();
+        Departamento[] departamentos = iob.instanciarDepartamentos();
+        Lotacao[] lotacoes = iob.instanciarLotacoes(funcionarios,departamentos,cargos);
+
+        TableCargosDrop cargosDrop = new TableCargosDrop();
+        cargosDrop.excluiTabela();
+
+        TableFuncionariosDrop funcionariosDrop = new TableFuncionariosDrop();
+        funcionariosDrop.excluiTabela();
+
+        TableDepartamentosDrop departamentosDrop = new TableDepartamentosDrop();
+        departamentosDrop.excluiTabela();
+
+        TableLotacoesDrop lotacoesDrop = new TableLotacoesDrop();
+        lotacoesDrop.excluiTabela();
+
 
         TableCargosCreate cargosCreate = new TableCargosCreate();
         cargosCreate.criaTabela();
@@ -40,30 +58,39 @@ public class main {
         AdicionaFKTabelaLotacoes adicionaFKTabelaLotacoes = new AdicionaFKTabelaLotacoes();
         adicionaFKTabelaLotacoes.alteraTabela();
 
-//        PersisteFuncionario pf = new PersisteFuncionario();
-//        pf.persisteFuncionario(funcionarios[0]);
-//        pf.persisteFuncionario(funcionarios[1]);
-//        pf.persisteFuncionario(funcionarios[2]);
-//        pf.persisteFuncionario(funcionarios[3]);
-//        pf.persisteFuncionario(funcionarios[4]);
-//        pf.persisteFuncionario(funcionarios[5]);
-//        pf.persisteFuncionario(funcionarios[6]);
-//        pf.persisteFuncionario(funcionarios[7]);
-//        pf.persisteFuncionario(funcionarios[8]);
-//        pf.persisteFuncionario(funcionarios[9]);
-//
-//        PersisteDepartamento pd = new PersisteDepartamento();
-//        pd.persisteDepartamento(departamentos[0]);
-//        pd.persisteDepartamento(departamentos[1]);
-//        pd.persisteDepartamento(departamentos[2]);
-//        pd.persisteDepartamento(departamentos[3]);
-//
-//        PersisteCargo pc = new PersisteCargo();
-//        pc.persisteCargo(cargos[0]);
-//        pc.persisteCargo(cargos[1]);
-//        pc.persisteCargo(cargos[2]);
-//
-//        PersisteLotacao pl = new PersisteLotacao();
+        PersisteFuncionario pf = new PersisteFuncionario();
+        pf.persisteFuncionario(funcionarios[0]);
+        pf.persisteFuncionario(funcionarios[1]);
+        pf.persisteFuncionario(funcionarios[2]);
+        pf.persisteFuncionario(funcionarios[3]);
+        pf.persisteFuncionario(funcionarios[4]);
+        pf.persisteFuncionario(funcionarios[5]);
+        pf.persisteFuncionario(funcionarios[6]);
+        pf.persisteFuncionario(funcionarios[7]);
+        pf.persisteFuncionario(funcionarios[8]);
+        pf.persisteFuncionario(funcionarios[9]);
 
+        PersisteDepartamento pd = new PersisteDepartamento();
+        pd.persisteDepartamento(departamentos[0]);
+        pd.persisteDepartamento(departamentos[1]);
+        pd.persisteDepartamento(departamentos[2]);
+        pd.persisteDepartamento(departamentos[3]);
+
+        PersisteCargo pc = new PersisteCargo();
+        pc.persisteCargo(cargos[0]);
+        pc.persisteCargo(cargos[1]);
+        pc.persisteCargo(cargos[2]);
+
+        PersisteLotacao pl = new PersisteLotacao();
+        pl.persisteLotacao(lotacoes[0]);
+        pl.persisteLotacao(lotacoes[1]);
+        pl.persisteLotacao(lotacoes[2]);
+        pl.persisteLotacao(lotacoes[3]);
+        pl.persisteLotacao(lotacoes[4]);
+        pl.persisteLotacao(lotacoes[5]);
+        pl.persisteLotacao(lotacoes[6]);
+        pl.persisteLotacao(lotacoes[7]);
+        pl.persisteLotacao(lotacoes[8]);
+        pl.persisteLotacao(lotacoes[9]);
     }
 }

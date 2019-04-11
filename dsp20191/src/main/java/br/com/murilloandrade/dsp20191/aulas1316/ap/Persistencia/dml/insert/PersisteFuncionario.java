@@ -11,8 +11,8 @@ public class PersisteFuncionario extends PersistenciaJdbc {
 
         String sql = "INSERT INTO FUNCIONARIOS " +
                 "VALUES('" + funcionario.getId() +
-                "','" + funcionario.getMatricula() +
                 "','" + funcionario.getNome() +
+                "','" + funcionario.getMatricula() +
                 "')";
 
         stmt.executeUpdate(sql);

@@ -2,6 +2,7 @@ package br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.dml.query;
 
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Objetos.Cargo;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Objetos.Departamento;
+import br.com.murilloandrade.dsp20191.aulas1316.ap.Objetos.Funcionario;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Objetos.Lotacao;
 import br.com.murilloandrade.dsp20191.aulas1316.ap.Persistencia.base.PersistenciaJdbc;
 
@@ -28,6 +29,7 @@ public class ConsultaLotacao extends PersistenciaJdbc {
         ResultSet rs = pstmt.executeQuery(  );
         Cargo cargo = new Cargo();
         Departamento departamento = new Departamento();
+        Funcionario funcionario = new Funcionario();
         while(rs.next()){
             lotacao.setId(rs.getLong("ID_LOTACAO"));
             lotacao.setDataInicial(rs.getDate("DATAINICIAL"));
@@ -36,6 +38,8 @@ public class ConsultaLotacao extends PersistenciaJdbc {
             lotacao.setCargo(cargo);
             departamento.setId(rs.getLong("DEPARTAMENTO"));
             lotacao.setDepartamento(departamento);
+            funcionario.setId(rs.getLong("FUNCIONARIO"));
+            lotacao.setFuncionario(funcionario);
         }
 
         rs.close();

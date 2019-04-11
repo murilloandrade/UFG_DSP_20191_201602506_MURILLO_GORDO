@@ -11,78 +11,50 @@ import java.sql.Date;
 public class InstanciaObjetos {
     public Cargo[] instanciarCargos() {
         Cargo[] cargos = new Cargo[3];
-        cargos[0].setNome("Vendedor");
-        cargos[0].setId((long) 10);
-        cargos[0].setSalario(2000);
-
-        cargos[1].setNome("Analista");
-        cargos[1].setId((long) 11);
-        cargos[1].setSalario(1500);
-
-        cargos[2].setNome("Desenvolvedor");
-        cargos[2].setId((long) 12);
-        cargos[2].setSalario(2500);
+        cargos[0] = new Cargo("The World",8000,(long) 10);
+        cargos[1] = new Cargo("Star Platinum",8001,(long) 11);
+        cargos[2] = new Cargo("Hermit Purple",8002,(long) 12);
         return cargos;
     }
 
     public Funcionario[] instanciarFuncionarios(){
         Funcionario[] funcionarios = new Funcionario[10];
-        funcionarios[1].setId((long) 20);
-        funcionarios[1].setNome("Rafael");
-        funcionarios[1].setMatricula((long) 20160);
-
-        funcionarios[1].setId((long) 21);
-        funcionarios[1].setNome("Marcos");
-        funcionarios[1].setMatricula((long) 20161);
-
-        funcionarios[2].setId((long) 22);
-        funcionarios[2].setNome("Caio");
-        funcionarios[2].setMatricula((long) 20162);
-
-        funcionarios[3].setId((long) 23);
-        funcionarios[3].setNome("Christian");
-        funcionarios[3].setMatricula((long) 20163);
-
-        funcionarios[4].setId((long) 24);
-        funcionarios[4].setNome("Maria");
-        funcionarios[4].setMatricula((long) 20164);
-
-        funcionarios[5].setId((long) 25);
-        funcionarios[5].setNome("Paula");
-        funcionarios[5].setMatricula((long) 20165);
-
-        funcionarios[6].setId((long) 26);
-        funcionarios[6].setNome("Victoria");
-        funcionarios[6].setMatricula((long) 20166);
-
-        funcionarios[7].setId((long) 27);
-        funcionarios[7].setNome("Thais");
-        funcionarios[7].setMatricula((long) 20167);
-
-        funcionarios[8].setId((long) 28);
-        funcionarios[8].setNome("Ana");
-        funcionarios[8].setMatricula((long) 20168);
-
-        funcionarios[9].setId((long) 29);
-        funcionarios[9].setNome("Dandara");
-        funcionarios[9].setMatricula((long) 20169);
+        funcionarios[0] = new Funcionario("Caesar",(long) 20160,(long) 20);
+        funcionarios[1] = new Funcionario("Jonathan",(long) 20160,(long) 21);
+        funcionarios[2] = new Funcionario("Joseph",(long) 20160,(long) 22);
+        funcionarios[3] = new Funcionario("Jotaro",(long) 20160,(long) 23);
+        funcionarios[4] = new Funcionario("Josuke",(long) 20160,(long) 24);
+        funcionarios[5] = new Funcionario("Giorno",(long) 20160,(long) 25);
+        funcionarios[6] = new Funcionario("Jolyne",(long) 20160,(long) 26);
+        funcionarios[7] = new Funcionario("John",(long) 20160,(long) 27);
+        funcionarios[8] = new Funcionario("Dio",(long) 20160,(long) 28);
+        funcionarios[9] = new Funcionario("Smokey",(long) 20160,(long) 29);
         return funcionarios;
     }
 
     public Departamento[] instanciarDepartamentos()
     {
         Departamento[] departamentos = new Departamento[4];
-        departamentos[0].setId((long) 30);
-        departamentos[0].setNome("Departamento Norte");
-
-        departamentos[0].setId((long) 31);
-        departamentos[0].setNome("Departamento Sul");
-
-        departamentos[0].setId((long) 32);
-        departamentos[0].setNome("Departamento Leste");
-
-        departamentos[0].setId((long) 33);
-        departamentos[0].setNome("Departamento Oeste");
+        departamentos[0] = new Departamento((long) 30,"Phantom Blood");
+        departamentos[1] = new Departamento((long) 31,"Battle Tendency");
+        departamentos[2] = new Departamento((long) 32,"Stardust Crusaders");
+        departamentos[3] = new Departamento((long) 33,"Diamond is Unbreakable");
         return departamentos;
+    }
+
+    public Lotacao[] instanciarLotacoes(Funcionario[] funcionarios,Departamento[] departamentos, Cargo[] cargos)
+    {
+        Lotacao[] lotacoes = new Lotacao[10];
+        lotacoes[0] = new Lotacao((long) 40, new Date(1451008800), new Date(1482631200),cargos[0],departamentos[0],funcionarios[0]);
+        lotacoes[1] = new Lotacao((long) 41, new Date(1230170400), new Date(1261706400),cargos[0],departamentos[0],funcionarios[1]);
+        lotacoes[2] = new Lotacao((long) 42, new Date(1293242400), new Date(1324778400),cargos[0],departamentos[1],funcionarios[2]);
+        lotacoes[3] = new Lotacao((long) 43, new Date(1356400800), new Date(1387936800),cargos[0],departamentos[1],funcionarios[3]);
+        lotacoes[4] = new Lotacao((long) 44, new Date(1419472800), new Date(1482631200),cargos[1],departamentos[2],funcionarios[4]);
+        lotacoes[5] = new Lotacao((long) 45, new Date(409633200), new Date(756784800),cargos[1],departamentos[2],funcionarios[5]);
+        lotacoes[6] = new Lotacao((long) 46, new Date(914551200), new Date(946087200),cargos[1],departamentos[2],funcionarios[6]);
+        lotacoes[7] = new Lotacao((long) 47, new Date(1009245600), new Date(1072317600),cargos[2],departamentos[3],funcionarios[7]);
+        lotacoes[8] = new Lotacao((long) 48, new Date(1103940000), new Date(1135476000),cargos[2],departamentos[3],funcionarios[8]);
+        lotacoes[9] = new Lotacao((long) 49, new Date(1198548000), new Date(1482631200),cargos[2],departamentos[3],funcionarios[9]);
+        return lotacoes;
     }
 }

@@ -15,6 +15,7 @@ public class PersisteLotacao extends PersistenciaJdbc {
                 "','" + lotacao.getDataFinal() +
                 "','" + lotacao.getCargo().getId() +
                 "','" + lotacao.getDepartamento().getId() +
+                "','" + lotacao.getFuncionario().getId() +
                 "')";
 
         stmt.executeUpdate(sql);

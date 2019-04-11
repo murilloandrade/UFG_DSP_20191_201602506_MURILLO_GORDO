@@ -15,7 +15,8 @@ public class TableLotacoesCreate extends PersistenciaJdbc {
                 "DATA_INICIAL DATE NOT NULL," +
                 "DATA_FINAL DATE," +
                 "CARGO LONG NOT NULL, " +
-                "DEPARTAMENTO LONG NOT NULL" +
+                "DEPARTAMENTO LONG NOT NULL, " +
+                "FUNCIONARIO LONG NOT NULL" +
                 ")";
 
         stmt.executeUpdate(sql);
