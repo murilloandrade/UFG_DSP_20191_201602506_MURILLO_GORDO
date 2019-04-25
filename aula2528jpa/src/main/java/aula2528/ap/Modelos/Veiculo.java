@@ -81,4 +81,16 @@ public class Veiculo implements Serializable {
     public void setPotenciaMotor(Integer potenciaMotor) {
         this.potenciaMotor = potenciaMotor;
     }
+
+    @Override
+    public String toString() {
+        return "Veiculo{" +
+                "id=" + id +
+                ", marca='" + marca + '\'' +
+                ", modelo='" + modelo + '\'' +
+                ", anoFabricacao=" + anoFabricacao +
+                ", anoModelo=" + anoModelo +
+                ", potenciaMotor=" + potenciaMotor +
+                '}';
+    }
 }
