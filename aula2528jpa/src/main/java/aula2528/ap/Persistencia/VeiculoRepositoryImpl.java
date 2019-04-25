@@ -10,7 +10,7 @@ import java.util.List;
 
 public class VeiculoRepositoryImpl implements VeiculoRepository {
 
-    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("br.com.gilmarioarantes.jpaexemplo");
+    private EntityManagerFactory emf = Persistence.createEntityManagerFactory("br.com.murilloandrade.aula2528jpa");
     private EntityManager em;
 
     public VeiculoRepositoryImpl(){

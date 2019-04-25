@@ -1,9 +1,14 @@
 package aula2528.ap.Modelos;
 
-/**
- * Created by Alunoinf_2 on 24/04/2019.
- */
-public class Veiculo {
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.Id;
+import java.io.Serializable;
+
+@Entity
+public class Veiculo implements Serializable {
+    @Id
+    @GeneratedValue
     Long id;
     String marca;
     String modelo;
@@ -12,6 +17,15 @@ public class Veiculo {
     Integer potenciaMotor;
 
     public Veiculo(Long id, String marca, String modelo, Integer anoFabricacao, Integer anoModelo, Integer potenciaMotor) {
+        this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+        this.anoFabricacao = anoFabricacao;
+        this.anoModelo = anoModelo;
+        this.potenciaMotor = potenciaMotor;
+    }
+
+    public Veiculo(String marca, String modelo, Integer anoFabricacao, Integer anoModelo, Integer potenciaMotor) {
         this.id = id;
         this.marca = marca;
         this.modelo = modelo;
